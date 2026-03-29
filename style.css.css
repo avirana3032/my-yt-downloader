@@ -1,0 +1,125 @@
+/* Color Variables: Light aur Dark Mode ke liye */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f9f9f9;
+    --primary-color: #ff0000;
+    --secondary-color: #28a745;
+    --input-border: #dddddd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --card-bg: #1e1e1e;
+    --primary-color: #ff4d4d;
+    --input-border: #444444;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#themeToggle {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--input-border);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#fetchBtn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Video Details Card */
+#videoDetails {
+    margin-top: 30px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.quality-selector {
+    margin: 20px 0;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+}
+
+.dl-btn {
+    width: 45%;
+    margin: 5px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#loader {
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
