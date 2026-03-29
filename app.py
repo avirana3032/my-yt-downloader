@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, send_file, jsonify
 from pytubefix import YouTube
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -30,6 +30,6 @@ def download():
     except Exception as e:
         return str(e), 500
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     if not os.path.exists('downloads'): os.makedirs('downloads')
     app.run(debug=True)
