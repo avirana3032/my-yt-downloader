@@ -28,8 +28,5 @@ def download():
         file_path = stream.download(output_path="downloads")
         return send_file(file_path, as_attachment=True)
     except Exception as e:
-        return str(e), 500
-
-if __name__ == '__main__':
-    if not os.path.exists('downloads'): os.makedirs('downloads')
-    app.run(debug=True)
+        return str(e), 500  
+app = app
